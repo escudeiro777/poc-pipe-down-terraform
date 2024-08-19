@@ -92,9 +92,9 @@ resource "aws_db_instance" "db_instance" {
   engine                  = "mysql"
   engine_version          = "8.0.37"
   multi_az                = false
-  identifier              = "dev-rds-instance-2"
+  identifier              = "dev-rds-instance"
   username                = "admin"
-  password                = "*"
+  password                = "adminadmin"
   instance_class          = "db.t3.micro"
   allocated_storage       = 20
   db_subnet_group_name    = aws_db_subnet_group.database_subnet_group.name

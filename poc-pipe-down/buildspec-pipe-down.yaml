@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install: 
+    on-failure: ABORT
+    commands:
+      - cd ./scripts/poc-pipe-down
+      - terraform init --upgrade
+      - pip install -r requirements.txt
+  build:
+    on-failure: ABORT
+    commands:
+      - terraform apply --auto-approve
+      - python3 delete-rds.py
