@@ -9,6 +9,7 @@ phases:
       - unzip terraform_1.5.0_linux_amd64.zip
       - mv terraform /usr/local/bin/
       - terraform init --upgrade
+      - pip install --upgrade pip
       - pip install -r requirements.txt
   build:
     on-failure: ABORT
