@@ -5,6 +5,9 @@ phases:
     on-failure: ABORT
     commands:
       - cd ./poc-pipe-down/scripts
+      - wget https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_amd64.zip
+      - unzip terraform_1.5.0_linux_amd64.zip
+      - mv terraform /usr/local/bin/
       - terraform init --upgrade
       - pip install -r requirements.txt
   build:
