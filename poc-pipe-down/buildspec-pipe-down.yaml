@@ -15,4 +15,4 @@ phases:
     on-failure: ABORT
     commands:
       - terraform apply --auto-approve
-      - python3 delete-rds.py
+
